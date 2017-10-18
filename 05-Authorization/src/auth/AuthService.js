@@ -14,8 +14,6 @@ export default class AuthService {
   constructor () {
     // Add callback Lock's `authenticated` event
     this.lock.on('authenticated', this.setSession.bind(this))
-    // Add callback for Lock's `authorization_error` event
-    this.lock.on('authorization_error', error => console.log(error))
     this.login = this.login.bind(this)
     this.setSession = this.setSession.bind(this)
     this.getAccessToken = this.getAccessToken.bind(this)
